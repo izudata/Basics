@@ -1,0 +1,14 @@
+---
+title: "Querying SQL Database"
+author: "Izu"
+date: "2024-11-03"
+output: html_document
+---
+
+To setup SQL Server in R
+
+install.packages("odbc")
+
+> rm(list = ls())  ---this clear the environment 
+> library(DBI)
+> library(odbc)
