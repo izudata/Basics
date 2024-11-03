@@ -35,4 +35,4 @@ df %>%
   filter(shipcountry %in% c("USA", "France")) %>% 
   view()
 
-nnn
+
