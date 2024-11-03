@@ -16,4 +16,17 @@ install.packages("odbc")
 >library(tidyverse)
 
 
-two repos
+Explanation of the Code
+select(orderid, orderdate, shipcountry): Selects the specified columns from your data frame.
+
+filter(shipcountry %in% c("Brazil", "France", "USA")): Filters the data to include only the rows where shipcountry matches one of the specified countries.
+
+arrange(orderdate): This arranges the filtered data in ascending order based on the orderdate column. If you want to sort by a different column, just replace orderdate with the desired column name.
+
+view(): Opens a viewer window in RStudio to display the resulting data frame.
+
+Additional Sorting Options
+Descending Order: If you want to sort in descending order, you can use the desc() function:
+
+rcode
+arrange(desc(orderdate))

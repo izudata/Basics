@@ -41,4 +41,16 @@ df %>%
   filter(shipcountry %in% c("USA", "France", "Brazil")) %>% 
   view()
 
-df
+df %>% 
+  select (orderid, orderdate, shipcountry) %>% 
+  filter(shipcountry %in% c("Brazil", "France", "USA")) %>% 
+  arrange(shipcountry) %>%
+  view()
+
+
+df %>% 
+  select(orderid, orderdate, shipcountry) %>% 
+  filter(shipcountry %in% c("Brazil", "France", "USA")) %>% 
+  arrange(desc(orderdate)) %>% 
+  #arrange(orderdate) %>%  # Change 'orderdate' to the column you want to sort by
+  view()
