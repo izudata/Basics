@@ -40,3 +40,5 @@ df %>%
   select(orderid, orderdate, shipcountry) %>% 
   filter(shipcountry %in% c("USA", "France", "Brazil")) %>% 
   view()
+
+
