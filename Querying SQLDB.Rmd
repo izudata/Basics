@@ -12,6 +12,6 @@ install.packages("odbc")
 > rm(list = ls())  ---this clear the environment 
 > library(DBI)
 > library(odbc)
->library(tidyverse)
+
 
 
