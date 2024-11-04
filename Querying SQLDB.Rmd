@@ -30,3 +30,17 @@ Descending Order: If you want to sort in descending order, you can use the desc(
 
 rcode
 arrange(desc(orderdate))
+
+
+To remove a package from R
+ remove.packages("RSQLite")
+ 
+ Connection Syntax
+ con <- DBI::dbConnect(odbc::odbc(), 
+                      Driver = "SQL Server", 
+                      Server = "localhost\\SQLEXPRESS", 
+                      Database = "database name", 
+                      Trusted_Connection = "True")
+ 
+ Closing connection
+ dbDisconnect(con)

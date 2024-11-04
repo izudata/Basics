@@ -54,3 +54,19 @@ df %>%
   arrange(desc(orderdate)) %>% 
   #arrange(orderdate) %>%  # Change 'orderdate' to the column you want to sort by
   view()
+
+dbGetQuery(con, 'select COUNT (DISTINCT orderid) AS countorderid FROM [TSQLV4].[Sales].[Orders]')
+
+dbGetQuery(con, 'select orderid, shipcountry FROM [TSQLV4].[Sales].[Orders]')
+
+result <- dbGetQuery(con, 'SELECT orderid, shipcountry 
+                           FROM [TSQLV4].[Sales].[Orders] 
+                           WHERE shipcountry = \'Brazil\';')
+result
+
+
+head(df, n = 10)
+
+nrow(df)
+
+show_query(head(df, n = 10))
