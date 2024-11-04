@@ -69,4 +69,19 @@ head(df, n = 10)
 
 nrow(df)
 
-show_query(head(df, n = 10))
+df %>% 
+  filter (shipcountry == "Brazil") %>% 
+  select(orderid, orderdate, shipcountry)
+
+
+df %>% 
+  filter(shipcountry %in% c("Brazil", "USA", "France")) %>% 
+  select(orderid, orderdate, shipcountry)
+
+customers <- dbGetQuery(con, "SELECT * FROM [TSQLV4].[Sales].[Customers]")
+
+customers %>% 
+  filter(custid == 1) %>% 
+  inner_join(df) %>% 
+  collect()
+  
